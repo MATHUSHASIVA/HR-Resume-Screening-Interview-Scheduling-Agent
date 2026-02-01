@@ -473,21 +473,8 @@ def main():
         - Moderate Fit: Score 50-70, may accept or reject
         - Not Suitable: Score <50, generates rejection email
         """)
-        
-        # System Stats
-        st.subheader("📊 System Capabilities")
-        
-        col1, col2, col3, col4 = st.columns(4)
-        
-        with col1:
-            st.metric("Agents", "3", help="Resume Analyzer, Interview Coordinator, Supervisor")
-        with col2:
-            st.metric("Processing Time", "~20s", help="Average time per candidate")
-        with col3:
-            st.metric("Questions Generated", "8", help="Personalized interview questions")
-        with col4:
-            st.metric("Accuracy", "95%", help="Skill matching precision")
 
 
 if __name__ == "__main__":
     main()
+
