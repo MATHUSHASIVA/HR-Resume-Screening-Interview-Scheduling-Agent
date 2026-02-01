@@ -307,10 +307,10 @@ HR SCREENING RESULTS
       8. [Technical] What's your approach to prompt engineering for
          production systems? Any specific techniques you've found effective?
 
-   Proposed Time Slots:
-      • Monday, February 03, 2026 at 10:00 AM (IST)
-      • Tuesday, February 04, 2026 at 2:00 PM (IST)
-      • Wednesday, February 05, 2026 at 4:00 PM (IST)
+   Scheduled Interview Time:
+      📅 Monday, February 03, 2026 at 10:00 AM (IST)
+      ⏱️  Duration: 1 hour
+      🔒 Status: AUTO-BOOKED
 
    Recommended Interviewers:
       • HR Manager
@@ -331,18 +331,14 @@ HR SCREENING RESULTS
    particularly your experience building scalable agentic AI systems and your
    approach to optimizing LLM performance.
 
-   Please let us know which of the following times works best for you:
+   We have scheduled your interview for Monday, February 03, 2026 at 10:00 AM (IST).
+   The interview will last approximately 1 hour.
 
-   • Monday, February 03, 2026 at 10:00 AM (IST)
-   • Tuesday, February 04, 2026 at 2:00 PM (IST)
-   • Wednesday, February 05, 2026 at 4:00 PM (IST)
+   The interview will be conducted with members of our AI Engineering team. 
+   We'll discuss your technical experience, review your approach to specific 
+   challenges, and answer any questions you have about Zelora Tech and the role.
 
-   The interview will last approximately 1 hour and will be conducted with
-   members of our AI Engineering team. We'll discuss your technical experience,
-   review your approach to specific challenges, and answer any questions you
-   have about Zelora Tech and the role.
-
-   Please reply with your preferred time slot, and we'll send a calendar
+   Please confirm your availability for this time, and we'll send a calendar
    invitation with video conference details.
 
    We're excited about the possibility of you joining our team!
