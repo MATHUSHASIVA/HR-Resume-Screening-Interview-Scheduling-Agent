@@ -111,8 +111,6 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-
-
 4. **Verify environment setup**
 ```bash
 # Environment file (.env) is already configured with:
@@ -136,6 +134,61 @@ python main.py
 **Option 3: Demo Mode**
 ```bash
 python demo.py
+```
+
+**Option 4: View Booked Interview Slots**
+```bash
+python view_bookings.py
+```
+
+**Option 5: Manage Bookings (view, cancel, clear)**
+```bash
+python manage_bookings.py
+```
+
+---
+
+## 📅 Interview Booking Management
+
+The system now includes intelligent booking management with business rules:
+
+### Scheduling Rules & Constraints
+- **Business Hours Only**: 10:00 AM - 12:00 PM OR 2:00 PM - 5:00 PM
+- **Weekdays Only**: Monday through Friday (weekends automatically skipped)
+- **Holiday Checking**: Skips company holidays and public holidays
+- **Conflict Prevention**: Checks existing bookings before proposing slots
+
+### Automatic Booking Check
+- **Smart Scheduling**: System finds available time slots within business hours
+- **Holiday-Aware**: Automatically skips configured company holidays
+- **Conflict Prevention**: Interview slots checked against existing bookings
+- **Auto-Booking**: First available slot is automatically booked for qualified candidates
+
+### Booking Features
+✅ **Business Hours Validation**: Only 10 AM-12 PM or 2 PM-5 PM slots  
+✅ **Holiday Detection**: Skips company holidays automatically  
+✅ **Weekend Exclusion**: No Saturday/Sunday interviews  
+✅ **Persistent Storage**: All bookings saved to `data/booked_slots.json`  
+✅ **Availability Check**: Real-time checking of booked vs. available slots  
+✅ **Automatic Assignment**: First slot auto-booked to prevent conflicts  
+✅ **Booking Management**: View, cancel, or clear bookings via utility scripts  
+
+### Booking Workflow
+```
+1. Resume Analysis (Score ≥ 70)
+   ↓
+2. Generate Interview Slots
+   ├─ Filter by business hours (10 AM-12 PM, 2 PM-5 PM)
+   ├─ Skip weekends (Sat/Sun)
+   ├─ Skip company holidays
+   ├─ Check existing bookings
+   └─ Find 3 available slots
+   ↓
+3. Auto-Book First Slot
+   └─ Save to booked_slots.json
+   ↓
+4. Send Invitation Email
+   └─ Include all 3 available slots
 ```
 
 ---
@@ -190,16 +243,12 @@ ZeloraTech/
 ├── .env                             # Environment variables
 └── README.md                        # This file
 ```
-
 ---
 
 ## 💡 Usage Examples
-
-
 ## Example 1: Strong Fit Candidate (Nethmika Perera)
 
 ### Input
-
 **Job Requirements:**
 ```json
 {
@@ -333,10 +382,7 @@ HR SCREENING RESULTS
 
 ✅ Results saved to: output/nethmika_perera_20260130_143022.json
 ```
-
 ---
-
-
 
 ## ⚙️ Configuration
 
@@ -365,7 +411,6 @@ MODERATE_FIT_THRESHOLD = 50         # Moderate fit classification
 MAX_RETRIES = 3         # API call retries
 RETRY_DELAY = 2         # Seconds between retries
 ```
-
 ---
 
 ## 🧪 Testing
@@ -392,7 +437,6 @@ python main.py
 # Test all candidates
 python demo.py
 ```
-
 ---
 
 ## 📝 Design Decisions & Trade-offs
@@ -416,12 +460,6 @@ python demo.py
 - ✅ **Pros**: Simple, transparent, configurable
 - ⚠️ **Cons**: No ML-based decision making
 - **Decision**: Sufficient for initial version, easy to upgrade
-
-### 5. **Text-Based Resume Processing**
-- ✅ **Pros**: Simple, works with PDFs via PyPDF2
-- ⚠️ **Cons**: May struggle with complex formatting
-- **Decision**: Covers 90%+ of use cases, can upgrade to OCR if needed
-
 ---
 
 ## 🚀 Future Enhancements

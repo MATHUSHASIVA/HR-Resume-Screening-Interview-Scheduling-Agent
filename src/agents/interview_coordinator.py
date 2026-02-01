@@ -18,7 +18,11 @@ from src.config import (
     NUM_INTERVIEW_SLOTS, COMPANY_NAME, HR_SIGNATURE, 
     INTERVIEW_AVAILABILITY, DEFAULT_INTERVIEW_DURATION
 )
-from src.utils import setup_logger, retry_on_failure, format_duration
+from src.utils import (
+    setup_logger, retry_on_failure, format_duration, 
+    load_booked_slots, save_booking, is_slot_available,
+    is_holiday, is_within_business_hours
+)
 
 
 logger = setup_logger(__name__)
@@ -241,8 +245,8 @@ Create a respectful rejection email with constructive feedback and proper format
         return result
     
     def generate_interview_slots(self) -> List[InterviewSlot]:
-        """Generate proposed interview time slots."""
-        logger.info("Generating interview time slots")
+        """Generate proposed interview time slots, checking for existing bookings, holidays, and business hours."""
+        logger.info("Generating interview time slots with availability, holiday, and business hours check")
         
         slots = []
         start_date = datetime.now() + timedelta(days=2)  # Start 2 days from now
@@ -250,22 +254,69 @@ Create a respectful rejection email with constructive feedback and proper format
         times = INTERVIEW_AVAILABILITY["preferred_times"]
         timezone = INTERVIEW_AVAILABILITY["timezone"]
         
-        for i in range(NUM_INTERVIEW_SLOTS):
-            slot_date = start_date + timedelta(days=i)
+        # Filter times to only include those within business hours
+        valid_times = [t for t in times if is_within_business_hours(t)]
+        
+        if not valid_times:
+            logger.error("No valid times within business hours (10 AM - 12 PM or 2 PM - 5 PM)")
+            return slots
+        
+        logger.info(f"Valid business hours times: {', '.join(valid_times)}")
+        
+        # Try to generate NUM_INTERVIEW_SLOTS available slots
+        max_attempts = NUM_INTERVIEW_SLOTS * 15  # Prevent infinite loop
+        attempt_count = 0
+        slot_date = start_date
+        time_index = 0
+        
+        while len(slots) < NUM_INTERVIEW_SLOTS and attempt_count < max_attempts:
+            attempt_count += 1
             
             # Skip weekends
             while slot_date.weekday() >= 5:  # 5 = Saturday, 6 = Sunday
                 slot_date += timedelta(days=1)
             
-            slot = InterviewSlot(
-                date=slot_date.strftime("%A, %B %d, %Y"),
-                time=times[i % len(times)],
-                duration_minutes=DEFAULT_INTERVIEW_DURATION,
-                timezone=timezone
-            )
-            slots.append(slot)
+            # Skip holidays
+            if is_holiday(slot_date):
+                logger.info(f"Skipping holiday: {slot_date.strftime('%A, %B %d, %Y')}")
+                slot_date += timedelta(days=1)
+                continue
+            
+            # Create proposed slot
+            proposed_date = slot_date.strftime("%A, %B %d, %Y")
+            proposed_time = valid_times[time_index % len(valid_times)]
+            
+            # Validate business hours (double-check)
+            if not is_within_business_hours(proposed_time):
+                logger.warning(f"Time {proposed_time} is outside business hours, skipping")
+                time_index += 1
+                continue
+            
+            # Check if slot is available (not already booked)
+            if is_slot_available(proposed_date, proposed_time):
+                slot = InterviewSlot(
+                    date=proposed_date,
+                    time=proposed_time,
+                    duration_minutes=DEFAULT_INTERVIEW_DURATION,
+                    timezone=timezone
+                )
+                slots.append(slot)
+                logger.info(f"✓ Available slot found: {proposed_date} at {proposed_time}")
+            else:
+                logger.info(f"✗ Slot already booked: {proposed_date} at {proposed_time}")
+            
+            # Move to next time slot
+            time_index += 1
+            
+            # If we've tried all times for this day, move to next day
+            if time_index % len(valid_times) == 0:
+                slot_date += timedelta(days=1)
         
-        logger.info(f"Generated {len(slots)} interview slots")
+        if len(slots) < NUM_INTERVIEW_SLOTS:
+            logger.warning(f"Only found {len(slots)} available slots out of {NUM_INTERVIEW_SLOTS} requested")
+        else:
+            logger.info(f"Generated {len(slots)} available interview slots")
+        
         return slots
     
     def suggest_interviewers(
@@ -328,6 +379,18 @@ Create a respectful rejection email with constructive feedback and proper format
             
             # Generate interview slots
             slots = self.generate_interview_slots()
+            
+            # Automatically book the first slot for the candidate
+            if slots:
+                first_slot = slots[0]
+                candidate_name = resume_analysis.candidate_info.name or "Unknown Candidate"
+                save_booking(
+                    candidate_name=candidate_name,
+                    date=first_slot.date,
+                    time=first_slot.time,
+                    timezone=first_slot.timezone
+                )
+                logger.info(f"Automatically booked first slot for {candidate_name}")
             
             # Generate invitation email
             email = self.generate_invitation_email(

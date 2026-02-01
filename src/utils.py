@@ -181,6 +181,163 @@ def format_duration(minutes: int) -> str:
     return f"{hours} hour{'s' if hours > 1 else ''} {mins} minutes"
 
 
+def load_booked_slots() -> list:
+    """
+    Load all booked interview slots from storage.
+    
+    Returns:
+        List of booked interview slots
+    """
+    import json
+    from pathlib import Path
+    
+    booking_file = Path("data/booked_slots.json")
+    
+    if not booking_file.exists():
+        return []
+    
+    try:
+        with open(booking_file, 'r') as f:
+            bookings = json.load(f)
+            return bookings if isinstance(bookings, list) else []
+    except (json.JSONDecodeError, Exception) as e:
+        logger = setup_logger(__name__)
+        logger.warning(f"Failed to load booked slots: {e}")
+        return []
+
+
+def save_booking(candidate_name: str, date: str, time: str, timezone: str) -> bool:
+    """
+    Save a booked interview slot to storage.
+    
+    Args:
+        candidate_name: Name of the candidate
+        date: Interview date
+        time: Interview time
+        timezone: Timezone
+        
+    Returns:
+        True if successful, False otherwise
+    """
+    import json
+    from pathlib import Path
+    from datetime import datetime
+    
+    logger = setup_logger(__name__)
+    
+    try:
+        booking_file = Path("data/booked_slots.json")
+        booking_file.parent.mkdir(parents=True, exist_ok=True)
+        
+        # Load existing bookings
+        bookings = load_booked_slots()
+        
+        # Create new booking entry
+        new_booking = {
+            "candidate_name": candidate_name,
+            "date": date,
+            "time": time,
+            "timezone": timezone,
+            "booked_at": datetime.now().isoformat()
+        }
+        
+        bookings.append(new_booking)
+        
+        # Save back to file
+        with open(booking_file, 'w') as f:
+            json.dump(bookings, f, indent=2)
+        
+        logger.info(f"Booked slot: {date} at {time} for {candidate_name}")
+        return True
+        
+    except Exception as e:
+        logger.error(f"Failed to save booking: {e}")
+        return False
+
+
+def is_slot_available(date: str, time: str) -> bool:
+    """
+    Check if a specific interview slot is available (not already booked).
+    
+    Args:
+        date: Interview date to check
+        time: Interview time to check
+        
+    Returns:
+        True if available, False if already booked
+    """
+    bookings = load_booked_slots()
+    
+    for booking in bookings:
+        if booking.get('date') == date and booking.get('time') == time:
+            return False
+    
+    return True
+
+
+def is_holiday(date) -> bool:
+    """
+    Check if a given date is a company holiday.
+    
+    Args:
+        date: datetime object or date string
+        
+    Returns:
+        True if it's a holiday, False otherwise
+    """
+    from src.config import COMPANY_HOLIDAYS
+    from datetime import datetime
+    
+    # Convert to date string if datetime object
+    if isinstance(date, datetime):
+        date_str = date.strftime("%Y-%m-%d")
+    else:
+        date_str = str(date)
+    
+    return date_str in COMPANY_HOLIDAYS
+
+
+def is_within_business_hours(time_str: str) -> bool:
+    """
+    Check if a time is within business hours (10 AM - 12 PM or 2 PM - 5 PM).
+    
+    Args:
+        time_str: Time string (e.g., "10:00 AM", "3:00 PM")
+        
+    Returns:
+        True if within business hours, False otherwise
+    """
+    from datetime import datetime
+    
+    try:
+        # Parse time string
+        time_obj = datetime.strptime(time_str.strip(), "%I:%M %p")
+        hour = time_obj.hour
+        minute = time_obj.minute
+        
+        # Convert to total minutes for easier comparison
+        total_minutes = hour * 60 + minute
+        
+        # Morning hours: 10:00 AM (600 min) to 12:00 PM (720 min)
+        morning_start = 10 * 60  # 600
+        morning_end = 12 * 60    # 720
+        
+        # Afternoon hours: 2:00 PM (840 min) to 5:00 PM (1020 min)
+        afternoon_start = 14 * 60  # 840
+        afternoon_end = 17 * 60    # 1020
+        
+        # Check if time falls within either range
+        in_morning = morning_start <= total_minutes <= morning_end
+        in_afternoon = afternoon_start <= total_minutes <= afternoon_end
+        
+        return in_morning or in_afternoon
+        
+    except Exception as e:
+        logger = setup_logger(__name__)
+        logger.warning(f"Failed to parse time '{time_str}': {e}")
+        return False
+
+
 class ValidationError(Exception):
     """Custom exception for validation errors."""
     pass
