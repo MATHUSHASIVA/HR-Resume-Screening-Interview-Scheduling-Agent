@@ -2,7 +2,7 @@
 
 An intelligent, automated HR screening system built with **LangGraph** that streamlines resume analysis, candidate evaluation, and interview coordination using agentic AI workflows.
 
-![HR Resume Screening AI System](<Images/HR Resume Screening AI System.jpeg>)
+![HR Resume Screening AI System](Images/HR-Resume-Screening-AI-System.jpeg)
 
 ---
 
@@ -166,7 +166,7 @@ The system now includes intelligent booking management with business rules:
 - **Conflict Prevention**: Interview slots checked against existing bookings
 - **Auto-Booking**: First available slot is automatically booked for qualified candidates
 
-![Interview Slots](<Images/Interview Slots.jpeg>)
+![Interview Slots](Images/Interview-Slots.jpeg)
 
 ---
 
@@ -250,9 +250,9 @@ python main.py
 
 ### Output
 
-![Strong Fit Example 1](<Images/Strong Fit.jpeg>)
+![Strong Fit Example 1](Images/Strong-Fit.jpeg)
 
-![Strong Fit Example 2](<Images/Strong Fit 2.jpeg>)
+![Strong Fit Example 2](Images/Strong-Fit-2.jpeg)
 
 ```
 ====================================================================
@@ -289,7 +289,7 @@ HR SCREENING RESULTS
 
 📅 INTERVIEW COORDINATION
 
-   ![Interview Coordination](<Images/Interviiew Coordination.jpeg>)
+   ![Interview Coordination](Images/Interviiew-Coordination.jpeg)
 
    Interview Questions (8 total):
       1. [Technical] Can you walk us through your approach to building
@@ -330,7 +330,7 @@ HR SCREENING RESULTS
 
 📧 EMAIL PREVIEW
 
-   ![Invitation to Interview Email](<Images/Invitation to Interview email.jpeg>)
+   ![Invitation to Interview Email](Images/Invitation-to-Interview-email.jpeg)
 
    Subject: Interview Invitation - AI Engineer Position at Zelora Tech
    ---
@@ -369,7 +369,7 @@ HR SCREENING RESULTS
 
 ## Example 2: Moderate Fit Candidate (Amali Fernando)
 
-![Moderate Fit Sample](<Images/Moderate Fit Sample.jpeg>)
+![Moderate Fit Sample](Images/Moderate-Fit-Sample.jpeg)
 
 Candidates with scores between 50-70 are classified as Moderate Fit and may receive rejection emails with constructive feedback.
 
@@ -377,7 +377,7 @@ Candidates with scores between 50-70 are classified as Moderate Fit and may rece
 
 ## Example 3: Rejection Email
 
-![Rejection Email](<Images/Rejection Email .jpeg>)
+![Rejection Email](Images/Rejection-Email-.jpeg)
 
 Candidates who don't meet the threshold receive personalized rejection emails with constructive feedback to help them improve.
 
