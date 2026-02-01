@@ -1,0 +1,39 @@
+{
+  "candidate_info": {
+    "name": "AMALI FERNANDO",
+    "email": "amali.fernando@email.com",
+    "phone": "+94 77 987 6543",
+    "location": "Colombo, Sri Lanka",
+    "linkedin": null
+  },
+  "screening_score": {
+    "score": 34,
+    "classification": "Not Suitable",
+    "reasoning": "The candidate, Amali Fernando, has a strong background in software development with 2 years of experience in Python and web development. However, the candidate's skills do not align well with the required skills for the AI Engineer position. The candidate lacks experience in key areas such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, and API Development. Although the candidate has a strong foundation in programming and problem-solving, the significant gap in required skills makes it challenging for the candidate to excel in this role without extensive training or upskilling.",
+    "strengths": [
+      "Strong problem-solving skills",
+      "Experience in Python programming",
+      "2 years of experience in software development",
+      "Quick learner"
+    ],
+    "gaps": [
+      "Lack of experience in AI and machine learning technologies",
+      "No experience with LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, and API Development",
+      "Limited knowledge of preferred skills such as Multi-agent Systems, Prompt Engineering, FastAPI, Docker, AWS, MongoDB, and Redis"
+    ],
+    "skill_match_percentage": 6.7
+  },
+  "decision": "reject",
+  "interview_coordination": {
+    "interview_questions": [],
+    "email_template": {
+      "subject": "Update on Your Application for AI Engineer at Zelora Tech",
+      "body": "Dear Amali Fernando,\n\nWe appreciate the time you took to apply for the AI Engineer position at Zelora Tech. We are grateful for your interest in joining our team and are impressed by your enthusiasm for the field.\n\nAfter careful consideration, we regret to inform you that we will not be moving forward with your application at this time. Our hiring team felt that your background lacked the necessary experience in AI and machine learning technologies that are crucial for this role. Specifically, we were looking for experience with technologies such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, and API Development, which were not evident in your application.\n\nPlease know that this decision is not a reflection on your potential as a candidate, but rather a matter of finding the best fit for our current needs. We encourage you to continue developing your skills and exploring opportunities in AI and machine learning. We would be happy to consider you for future positions that may be a better match for your skills and experience.\n\nThank you again for your interest in Zelora Tech. We wish you the best of luck in your job search and hope that our paths will cross again in the future.\n\nBest regards,\nZelora Tech\n\n\nBest regards,\nThe Zelora Tech Talent Team\nhr@zeloratech.com\n",
+      "tone": "Professional"
+    },
+    "interview_slots": [],
+    "recommended_interviewers": []
+  },
+  "timestamp": "2026-02-01T23:32:18.910280",
+  "error": null
+}

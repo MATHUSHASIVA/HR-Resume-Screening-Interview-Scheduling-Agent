@@ -1,0 +1,38 @@
+{
+  "candidate_info": {
+    "name": "KAVINDU SILVA",
+    "email": "kavindu.s@email.com",
+    "phone": "+94 71 234 5678",
+    "location": "Colombo, Sri Lanka",
+    "linkedin": null
+  },
+  "screening_score": {
+    "score": 20,
+    "classification": "Not Suitable",
+    "reasoning": "The candidate, KAVINDU SILVA, has a strong background in marketing and communications, but lacks the required technical skills for an AI Engineer role. Although they have basic Python programming skills, they do not possess any of the other required skills such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, or API Development. Additionally, their educational background in Communications does not align with the preferred degree in Computer Science, Engineering, or a related field. However, they have significant experience in project management, team coordination, and data analysis, which could be valuable in a different role.",
+    "strengths": [
+      "Strong communication and presentation skills",
+      "Project management and team coordination experience",
+      "Data analysis and reporting skills"
+    ],
+    "gaps": [
+      "Lack of required technical skills for AI Engineer role",
+      "No experience with LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, or API Development",
+      "Educational background does not align with preferred degree"
+    ],
+    "skill_match_percentage": 0.0
+  },
+  "decision": "reject",
+  "interview_coordination": {
+    "interview_questions": [],
+    "email_template": {
+      "subject": "Update on Your Application for AI Engineer at Zelora Tech",
+      "body": "Dear Kavindu Silva,\n\nWe appreciate the time you took to apply for the AI Engineer position at Zelora Tech and thank you for your interest in joining our team. After careful consideration, we regret to inform you that we will not be moving forward with your application at this time.\n\nAlthough your background and experience are impressive, we found that your skills and experience do not align with the specific technical requirements for this role, particularly in areas such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, LLM Applications, and API Development.\n\nPlease know that this decision is not a reflection on your potential as a candidate, and we encourage you to continue developing your skills and experience. We appreciate your enthusiasm for Zelora Tech and hope that you will consider applying for future opportunities that may be a better fit for your skills and expertise.\n\nThank you again for your interest in Zelora Tech, and we wish you the best of luck in your job search.\n\nBest regards,\nZelora Tech\n\n\nBest regards,\nThe Zelora Tech Talent Team\nhr@zeloratech.com\n",
+      "tone": "Professional"
+    },
+    "interview_slots": [],
+    "recommended_interviewers": []
+  },
+  "timestamp": "2026-02-01T23:32:54.508668",
+  "error": null
+}

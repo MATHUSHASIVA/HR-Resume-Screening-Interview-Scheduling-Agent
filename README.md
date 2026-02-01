@@ -164,33 +164,6 @@ The system now includes intelligent booking management with business rules:
 - **Conflict Prevention**: Interview slots checked against existing bookings
 - **Auto-Booking**: First available slot is automatically booked for qualified candidates
 
-### Booking Features
-✅ **Business Hours Validation**: Only 10 AM-12 PM or 2 PM-5 PM slots  
-✅ **Holiday Detection**: Skips company holidays automatically  
-✅ **Weekend Exclusion**: No Saturday/Sunday interviews  
-✅ **Persistent Storage**: All bookings saved to `data/booked_slots.json`  
-✅ **Availability Check**: Real-time checking of booked vs. available slots  
-✅ **Automatic Assignment**: First slot auto-booked to prevent conflicts  
-✅ **Booking Management**: View, cancel, or clear bookings via utility scripts  
-
-### Booking Workflow
-```
-1. Resume Analysis (Score ≥ 70)
-   ↓
-2. Generate Interview Slots
-   ├─ Filter by business hours (10 AM-12 PM, 2 PM-5 PM)
-   ├─ Skip weekends (Sat/Sun)
-   ├─ Skip company holidays
-   ├─ Check existing bookings
-   └─ Find 3 available slots
-   ↓
-3. Auto-Book First Slot
-   └─ Save to booked_slots.json
-   ↓
-4. Send Invitation Email
-   └─ Include all 3 available slots
-```
-
 ---
 
 ## 📊 State Management with LangGraph

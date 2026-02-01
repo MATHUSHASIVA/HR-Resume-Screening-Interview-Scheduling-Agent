@@ -1,0 +1,105 @@
+{
+  "candidate_info": {
+    "name": "MATHUSHA SIVAANANTHAN",
+    "email": "mathushasiva2k@gmail.com",
+    "phone": "+94 75 572 7989",
+    "location": "Colombo, Sri Lanka",
+    "linkedin": "linkedin.com/in/mathushasivaanathan"
+  },
+  "screening_score": {
+    "score": 82,
+    "classification": "Strong Fit",
+    "reasoning": "The candidate, MATHUSHA SIVAANANTHAN, has a strong background in machine learning engineering with 2 years of experience, exceeding the minimum requirement of 1 year. Although the calculated skill match is 46.7%, the candidate's skills in LangChain, FastAPI, Docker, AWS, MongoDB, and Python are highly relevant to the job requirements. Additionally, the candidate's experience in generative AI, LLM deployment, and prompt engineering demonstrates a strong foundation in AI engineering. However, the candidate lacks experience in LangGraph, OpenAI API, RAG Systems, and Vector Databases, which are required skills for the job.",
+    "strengths": [
+      "Strong background in machine learning engineering",
+      "Experience in generative AI, LLM deployment, and prompt engineering",
+      "Proficient in LangChain, FastAPI, Docker, AWS, and MongoDB",
+      "Skilled in Python, JavaScript, and TypeScript",
+      "Experience in developing end-to-end software solutions, including web applications, APIs, and database systems"
+    ],
+    "gaps": [
+      "Lack of experience in LangGraph",
+      "No experience in OpenAI API",
+      "Limited knowledge of RAG Systems",
+      "No experience in Vector Databases"
+    ],
+    "skill_match_percentage": 46.7
+  },
+  "decision": "accept",
+  "interview_coordination": {
+    "interview_questions": [
+      {
+        "question": "How would you design and implement a Retrieval-Augmented Generation (RAG) pipeline using LangGraph, given your experience with LangChain and HuggingFace Transformers, and what specific technical challenges do you anticipate in integrating LangGraph with your existing skill set?",
+        "category": "Technical",
+        "reasoning": "This question is relevant because it assesses the candidate's ability to apply their existing knowledge of generative AI and retrieval-augmented generation to a new technology (LangGraph), and evaluates their problem-solving skills in integrating new tools with their existing technical expertise."
+      },
+      {
+        "question": "Can you describe how you would design and implement a Retrieval-Augmented Generation pipeline using LangGraph, and how you would optimize it for efficient information retrieval in a multi-agent workflow?",
+        "category": "Technical",
+        "reasoning": "This question is relevant because it assesses the candidate's ability to apply their skills in generative AI, LLM deployment, and prompt engineering to a specific technical problem, while also evaluating their understanding of LangGraph and RAG pipelines, which are key requirements for the AI Engineer job."
+      },
+      {
+        "question": "Can you design a high-level architecture for a Retrieval-Augmented Generation pipeline using LangGraph, and explain how you would integrate it with a multi-agent workflow for complex automation, considering your experience with LangChain and HuggingFace Transformers?",
+        "category": "Technical",
+        "reasoning": "This question assesses the candidate's ability to apply their knowledge of generative AI, LLM deployment, and prompt engineering to a specific technical problem, while also evaluating their understanding of LangGraph and its potential applications in agentic AI systems."
+      },
+      {
+        "question": "Can you describe a situation where you had to learn and adapt to a new technology or framework quickly, and how you overcame any challenges that arose during the process?",
+        "category": "Behavioral",
+        "reasoning": "This question is relevant because the candidate lacks experience in LangGraph and has no experience with the OpenAI API, so it's essential to assess their ability to learn and adapt to new technologies quickly, which is a crucial skill for an AI Engineer."
+      },
+      {
+        "question": "Can you describe a situation where you had to learn and adapt to a new technology or framework that was not part of your initial skill set? How did you approach the learning process, and what strategies did you use to overcome any challenges you encountered?",
+        "category": "Behavioral",
+        "reasoning": "This question is relevant because the candidate lacks experience in LangGraph and has no experience with the OpenAI API, which are key requirements for the AI Engineer role. By asking about their ability to learn and adapt to new technologies, we can assess their potential to quickly get up to speed with the required tools and frameworks."
+      },
+      {
+        "question": "Can you describe a project where you had to design and develop a complex automation workflow using multi-agent systems, and how you overcame any challenges that arose during the implementation?",
+        "category": "Experience",
+        "reasoning": "This question is relevant because it assesses the candidate's experience in developing complex automation workflows, which is a key responsibility of the AI Engineer role, and allows us to evaluate their problem-solving skills and ability to work with multi-agent systems."
+      },
+      {
+        "question": "Can you describe a project where you had to design and develop a complex automation workflow using multi-agent systems, and how you overcame any challenges that arose during the implementation?",
+        "category": "Experience",
+        "reasoning": "This question is relevant because it assesses the candidate's experience in developing complex automation workflows, which is a key responsibility of the AI Engineer role, and allows us to evaluate their problem-solving skills and ability to work with multi-agent systems."
+      },
+      {
+        "question": "Suppose you're tasked with designing an agentic AI system using LangGraph for a complex automation task. However, you notice that the system requires integration with an external knowledge graph that is only accessible through the OpenAI API. How would you approach this problem, given your experience with LangChain and Retrieval-Augmented Generation, but lack of direct experience with LangGraph and the OpenAI API?",
+        "category": "Problem-Solving",
+        "reasoning": "This question assesses the candidate's ability to think critically and apply their knowledge of generative AI, LLM deployment, and prompt engineering to a novel problem, while also considering the limitations of their experience with LangGraph and OpenAI API."
+      }
+    ],
+    "email_template": {
+      "subject": "Invitation to Interview for AI Engineer Position at Zelora Tech",
+      "body": "Dear MATHUSHA SIVAANANTHAN,\n\nWe were impressed by your strong background in machine learning engineering and experience in generative AI, LLM deployment, and prompt engineering. We believe your skills and expertise would be a great fit for our team at Zelora Tech, and we are excited to invite you for an interview for the AI Engineer position.\n\nWe have scheduled an interview for Thursday, February 05, 2026 at 4:00 PM (IST), which will last for 1 hour. We would be delighted if you could join us at this time. Could you please confirm your availability for this scheduled time slot?\n\nWe look forward to speaking with you and exploring how you can contribute to our team's success.\n\nBest regards,\nThe Zelora Tech Talent Team\nhr@zeloratech.com",
+      "tone": "Professional"
+    },
+    "interview_slots": [
+      {
+        "date": "Thursday, February 05, 2026",
+        "time": "4:00 PM",
+        "duration_minutes": 60,
+        "timezone": "IST"
+      },
+      {
+        "date": "Thursday, February 05, 2026",
+        "time": "5:00 PM",
+        "duration_minutes": 60,
+        "timezone": "IST"
+      },
+      {
+        "date": "Friday, February 06, 2026",
+        "time": "10:00 AM",
+        "duration_minutes": 60,
+        "timezone": "IST"
+      }
+    ],
+    "recommended_interviewers": [
+      "HR Manager",
+      "AI Engineering Lead",
+      "Technical Lead"
+    ]
+  },
+  "timestamp": "2026-02-02T02:08:04.857635",
+  "error": null
+}

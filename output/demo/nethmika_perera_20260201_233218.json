@@ -1,0 +1,104 @@
+{
+  "candidate_info": {
+    "name": "NETHMIKA PERERA",
+    "email": "nethmika.p@email.com",
+    "phone": "+94 77 456 7890",
+    "location": "Colombo, Sri Lanka",
+    "linkedin": "linkedin.com/in/nethmika-perera"
+  },
+  "screening_score": {
+    "score": 96,
+    "classification": "Strong Fit",
+    "reasoning": "The candidate, Nethmika Perera, has an exceptional background in AI engineering, with a Master's degree in Artificial Intelligence and 4 years of experience in building production-grade AI systems. The candidate's skills align extremely well with the required skills, including LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, and Python. Additionally, the candidate possesses many of the preferred skills, such as Multi-agent Systems, Prompt Engineering, FastAPI, Docker, AWS, and MongoDB. The candidate's experience and education exceed the minimum requirements, and their summary demonstrates a strong passion for AI engineering and a proven track record of developing complex AI applications.",
+    "strengths": [
+      "Strong expertise in LangGraph, LangChain, and RAG Systems",
+      "Experience with Vector Databases, including Pinecone and Weaviate",
+      "Proficiency in Python, JavaScript, and TypeScript",
+      "Knowledge of Multi-agent Systems and Prompt Engineering",
+      "Familiarity with cloud platforms, including AWS, and containerization using Docker",
+      "Experience with various databases, including MongoDB, Redis, and PostgreSQL"
+    ],
+    "gaps": [
+      "No direct experience with LLM Applications is mentioned, although the candidate has experience with LLM Optimization",
+      "No mention of direct experience with API Development, although the candidate has experience with FastAPI and Flask"
+    ],
+    "skill_match_percentage": 86.7
+  },
+  "decision": "accept",
+  "interview_coordination": {
+    "interview_questions": [
+      {
+        "question": "Can you design a high-level architecture for a multi-agent workflow that utilizes LangGraph and RAG pipelines to develop an intelligent information retrieval system, and explain how you would optimize the performance of the system using vector databases like Pinecone or Weaviate?",
+        "category": "Technical",
+        "reasoning": "This question is relevant because it assesses the candidate's technical expertise in designing and developing agentic AI systems, building RAG pipelines, and implementing multi-agent workflows, which are key responsibilities of the AI Engineer job. The question also probes the candidate's ability to optimize system performance using vector databases, which is a critical aspect of the job."
+      },
+      {
+        "question": "Can you design and explain a high-level architecture for integrating a large language model with a vector database like Pinecone or Weaviate, and how would you optimize the performance of the system using LangGraph and LangChain?",
+        "category": "Technical",
+        "reasoning": "This question is relevant because it assesses the candidate's ability to design and develop agentic AI systems, build RAG pipelines, and implement multi-agent workflows, while also probing their understanding of vector databases and LLM optimization."
+      },
+      {
+        "question": "Can you design and explain a high-level architecture for integrating a large language model (LLM) with a LangGraph-based system, utilizing RAG pipelines for information retrieval and multi-agent workflows for automation, and discuss potential optimization strategies for the LLM within this architecture?",
+        "category": "Technical",
+        "reasoning": "This question is relevant because it assesses the candidate's ability to design and develop complex AI systems, specifically integrating LLMs with LangGraph and RAG pipelines, while also exploring their understanding of optimization strategies, which is crucial for the AI Engineer role."
+      },
+      {
+        "question": "Can you describe a situation where you had to adapt your existing LangGraph or LangChain implementation to meet new project requirements or handle unexpected complexities, and how you approached this challenge?",
+        "category": "Behavioral",
+        "reasoning": "This question assesses the candidate's ability to think on their feet, adapt to changing project requirements, and leverage their expertise in LangGraph and LangChain to overcome complex challenges, which is crucial for the AI Engineer role."
+      },
+      {
+        "question": "Can you describe a situation where you had to adapt your existing LangGraph or LangChain implementation to meet new project requirements or handle unexpected complexities, and how you handled the challenges that arose during that process?",
+        "category": "Behavioral",
+        "reasoning": "This question assesses the candidate's ability to adapt to changing project requirements, think critically, and troubleshoot complex issues, which are essential skills for an AI Engineer working on agentic AI systems and multi-agent workflows."
+      },
+      {
+        "question": "Can you describe a recent project where you designed and developed a complex AI system using LangGraph and LangChain, and how you implemented multi-agent workflows for automation? What were some of the challenges you faced, and how did you overcome them?",
+        "category": "Experience",
+        "reasoning": "This question is relevant because it allows the candidate to showcase their experience with LangGraph, LangChain, and multi-agent workflows, which are key requirements for the AI Engineer job. By asking about a specific project, we can assess the candidate's ability to design and develop complex AI systems, and their problem-solving skills in overcoming challenges."
+      },
+      {
+        "question": "Can you describe a recent project where you designed and developed a complex AI system using LangGraph and RAG pipelines? How did you handle scalability and performance optimization, and what were some of the key challenges you faced and how did you overcome them?",
+        "category": "Experience",
+        "reasoning": "This question is relevant because it allows the candidate to demonstrate their experience with LangGraph and RAG pipelines, and how they have applied their skills to real-world projects. It also gives insight into their problem-solving skills and ability to handle complex challenges."
+      },
+      {
+        "question": "Design a high-level architecture for an AI-powered chatbot that leverages LangGraph and RAG pipelines to provide intelligent information retrieval, and discuss how you would implement multi-agent workflows to handle complex user queries and optimize the system's performance using vector databases like Pinecone or Weaviate. How would you address potential scalability issues and ensure seamless integration with existing APIs?",
+        "category": "Problem-Solving",
+        "reasoning": "This question assesses the candidate's ability to think critically and design a comprehensive architecture that integrates their technical skills in LangGraph, RAG pipelines, and vector databases, while also evaluating their problem-solving skills in addressing potential scalability issues and API integration."
+      }
+    ],
+    "email_template": {
+      "subject": "Invitation to Interview for AI Engineer Position at Zelora Tech",
+      "body": "Dear Nethmika Perera, \n\nWe were impressed by your strong expertise in LangGraph, LangChain, and RAG Systems, as well as your experience with Vector Databases, including Pinecone and Weaviate. We would like to invite you for an interview for the AI Engineer position at Zelora Tech. \n\nWe have scheduled three time slots for the interview: Tuesday, February 03, 2026 at 10:00 AM (EST), Wednesday, February 04, 2026 at 2:00 PM (EST), or Thursday, February 05, 2026 at 4:00 PM (EST). The interview will be 1 hour long. \n\nPlease let us know which time slot works best for you. We are looking forward to discussing your qualifications further. \n\nBest regards, \nZelora Tech\n\n\nBest regards,\nThe Zelora Tech Talent Team\nhr@zeloratech.com\n",
+      "tone": "Professional"
+    },
+    "interview_slots": [
+      {
+        "date": "Tuesday, February 03, 2026",
+        "time": "10:00 AM",
+        "duration_minutes": 60,
+        "timezone": "EST"
+      },
+      {
+        "date": "Wednesday, February 04, 2026",
+        "time": "2:00 PM",
+        "duration_minutes": 60,
+        "timezone": "EST"
+      },
+      {
+        "date": "Thursday, February 05, 2026",
+        "time": "4:00 PM",
+        "duration_minutes": 60,
+        "timezone": "EST"
+      }
+    ],
+    "recommended_interviewers": [
+      "HR Manager",
+      "AI Engineering Lead",
+      "Technical Lead"
+    ]
+  },
+  "timestamp": "2026-02-01T23:31:49.299347",
+  "error": null
+}

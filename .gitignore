@@ -48,6 +48,5 @@ logs/
 htmlcov/
 
 # Output & Generated Files
-output/
 workflow_diagram.png
 *.png
