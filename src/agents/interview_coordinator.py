@@ -147,48 +147,52 @@ Guidelines:
 - Warm and welcoming tone
 - Express genuine interest in the candidate
 - Clearly state the position
-- Present available interview slots WITHOUT saying "we have scheduled" - instead say these slots are AVAILABLE or PROPOSED
-- DO NOT state "we have scheduled three time slots" - say "We have the following time slots available"
+- Present ONE scheduled interview time slot
+- State the specific date, time, and timezone clearly
+- Mention the interview duration
+- Ask candidate to confirm their availability for this specific time
 - Be concise and professional
 - Use proper paragraph breaks (double newlines \\n\\n between paragraphs)
 - End with {COMPANY_NAME} signature on a new line
 
-IMPORTANT: Present the time slots as OPTIONS for the candidate to choose from, not as already scheduled times.
+IMPORTANT: Present ONLY ONE scheduled interview time slot, not multiple options.
 
 Format:
 Dear [Name],
 
-[Introduction and interest paragraph]
+[Introduction and interest paragraph expressing interest in the candidate]
 
-[Available interview slots paragraph - present as options to choose from, NOT as already scheduled]
+[Interview details paragraph with THE scheduled time slot, duration, and asking for confirmation]
 
-[Closing paragraph asking them to confirm their preferred slot]
+[Closing paragraph]
 
 {HR_SIGNATURE}"""),
             ("user", """Candidate: {candidate_name}
 Position: {job_title}
 Candidate Strengths: {strengths}
 
-Available Interview Time Slots (for candidate to choose):
-{time_slots}
+Scheduled Interview Time Slot:
+{time_slot}
 
 Duration: {duration}
 
-Create an engaging invitation email presenting these as AVAILABLE time slot OPTIONS for the candidate to select their preference.""")
+Create an engaging invitation email with the scheduled interview time and ask them to confirm their availability.""")
         ])
         
         chain = prompt | llm_with_structure
         
-        slots_text = "\n".join([
-            f"- {slot.date} at {slot.time} ({slot.timezone})"
-            for slot in interview_slots
-        ])
+        # Use only the first available slot (which is auto-booked)
+        first_slot = interview_slots[0] if interview_slots else None
+        if not first_slot:
+            raise ValueError("No interview slots available")
+        
+        slots_text = f"{first_slot.date} at {first_slot.time} ({first_slot.timezone})"
         
         result = chain.invoke({
             "candidate_name": resume_analysis.candidate_info.name or "Candidate",
             "job_title": job_requirements.title,
             "strengths": ", ".join(screening_score.strengths[:2]),
-            "time_slots": slots_text,
+            "time_slot": slots_text,
             "duration": format_duration(DEFAULT_INTERVIEW_DURATION)
         })
         
