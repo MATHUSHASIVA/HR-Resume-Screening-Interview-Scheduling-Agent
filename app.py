@@ -189,6 +189,10 @@ def display_interview_coordination(coordination, decision):
         # Time Slots
         if slots:
             with st.expander("🕒 Proposed Interview Slots", expanded=True):
+                st.markdown("**🕐 Business Hours:** 10:00 AM - 12:00 PM or 2:00 PM - 5:00 PM")
+                st.markdown("**📅 Weekdays Only** (Weekends & Holidays Excluded)")
+                st.divider()
+                
                 for i, slot in enumerate(slots, 1):
                     date = slot.get('date') if isinstance(slot, dict) else slot.date
                     time = slot.get('time') if isinstance(slot, dict) else slot.time
@@ -196,11 +200,13 @@ def display_interview_coordination(coordination, decision):
                     
                     # Highlight first slot as booked
                     if i == 1:
-                        st.success(f"🔒 **Slot {i} (BOOKED):** {date} at {time} ({timezone})")
+                        st.success(f"🔒 **Slot {i} (AUTO-BOOKED):** {date} at {time} ({timezone})")
                     else:
-                        st.info(f"**Slot {i}:** {date} at {time} ({timezone})")
+                        st.info(f"✓ **Slot {i} (Available):** {date} at {time} ({timezone})")
                 
-                st.caption("💡 The first slot is automatically booked to prevent scheduling conflicts.")
+                st.divider()
+                st.caption("💡 First slot is auto-booked. All slots checked against existing bookings, holidays, and business hours.")
+                st.caption("📊 View all bookings: `python src/view_bookings.py`")
         
         # Recommended Interviewers
         if interviewers:
@@ -233,6 +239,7 @@ def main():
         st.header("⚙️ Configuration")
         
         # Show booking stats
+        st.subheader("📊 Booking Statistics")
         try:
             from pathlib import Path
             import json
@@ -240,14 +247,23 @@ def main():
             if booking_file.exists():
                 bookings = json.loads(booking_file.read_text())
                 if bookings:
-                    st.info(f"📅 **{len(bookings)} interview slot(s) booked**")
-                    with st.expander("View Bookings"):
+                    st.success(f"**{len(bookings)}** slot(s) booked")
+                    with st.expander("📋 Recent Bookings"):
                         for i, booking in enumerate(bookings[-5:], 1):  # Show last 5
-                            st.caption(f"{booking['candidate_name']} - {booking['date'][:15]}...")
+                            candidate = booking.get('candidate_name', 'Unknown')
+                            date_str = booking.get('date', 'N/A')[:20]
+                            time_str = booking.get('time', 'N/A')
+                            st.caption(f"**{candidate}**\n{date_str} at {time_str}")
+                            st.divider()
                         if len(bookings) > 5:
-                            st.caption(f"...and {len(bookings) - 5} more")
-        except:
-            pass
+                            st.info(f"...and {len(bookings) - 5} more")
+                    st.caption("🔧 Manage: `python src/manage_bookings.py`")
+                else:
+                    st.info("No bookings yet")
+            else:
+                st.info("No bookings yet")
+        except Exception as e:
+            st.warning(f"Could not load bookings")
         
         st.divider()
         

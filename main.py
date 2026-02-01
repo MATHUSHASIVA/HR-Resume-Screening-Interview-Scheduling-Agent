@@ -121,12 +121,17 @@ def print_results(state: AgentState):
                 print(f"      {i}. [{q.category}] {q.question}")
             
             if coord.interview_slots:
-                print(f"\n   Proposed Time Slots:")
+                print(f"\n   📅 Proposed Time Slots (Business Hours: 10 AM-12 PM or 2 PM-5 PM):")
                 for i, slot in enumerate(coord.interview_slots, 1):
-                    booked_indicator = "🔒 BOOKED" if i == 1 else ""
-                    print(f"      {i}. {slot.date} at {slot.time} ({slot.timezone}) {booked_indicator}")
+                    if i == 1:
+                        print(f"      {i}. {slot.date} at {slot.time} ({slot.timezone}) 🔒 AUTO-BOOKED")
+                    else:
+                        print(f"      {i}. {slot.date} at {slot.time} ({slot.timezone}) ✓ Available")
                 if coord.interview_slots:
-                    print(f"      Note: First slot is automatically booked to prevent conflicts")
+                    print(f"\n      ℹ️  Notes:")
+                    print(f"         • First slot automatically booked")
+                    print(f"         • All slots validated: weekdays only, no holidays, business hours")
+                    print(f"         • Conflicts checked against existing bookings")
             
             if coord.recommended_interviewers:
                 print(f"\n   Recommended Interviewers:")
@@ -194,8 +199,13 @@ def main():
         if final_state.decision == "accept" and final_state.interview_coordination:
             slots = final_state.interview_coordination.interview_slots
             if slots:
-                print(f"\n📅 Interview Slot Booked: {slots[0].date} at {slots[0].time}")
-                print(f"   View all bookings: python src/view_bookings.py")
+                print(f"\n📅 Interview Slot Auto-Booked:")
+                print(f"   Date: {slots[0].date}")
+                print(f"   Time: {slots[0].time} ({slots[0].timezone})")
+                print(f"   Duration: 60 minutes")
+                print(f"\n📊 Booking Management:")
+                print(f"   • View all bookings: python src/view_bookings.py")
+                print(f"   • Manage bookings: python src/manage_bookings.py")
         
         # Try to visualize workflow
         try:

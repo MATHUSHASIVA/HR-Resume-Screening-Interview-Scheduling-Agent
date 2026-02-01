@@ -120,7 +120,17 @@ def run_demo():
     print("="*70)
     print("✅ Demo completed!")
     print("📁 Results saved in: output/demo/")
-    print("\n💡 Tip: Check booked interview slots with: python src/view_bookings.py")
+    print("\n" + "="*70)
+    print("📊 BOOKING MANAGEMENT")
+    print("="*70)
+    print("\n💡 Useful Commands:")
+    print("   • View all bookings:  python src/view_bookings.py")
+    print("   • Manage bookings:    python src/manage_bookings.py")
+    print("\n📋 Business Rules:")
+    print("   • Hours: 10:00 AM - 12:00 PM or 2:00 PM - 5:00 PM")
+    print("   • Days: Monday - Friday (Weekends excluded)")
+    print("   • Holidays: Automatically skipped")
+    print("   • First slot: Auto-booked for qualified candidates\n")
     print("="*70 + "\n")
 
 
