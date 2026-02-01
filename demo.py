@@ -120,7 +120,7 @@ def run_demo():
     print("="*70)
     print("✅ Demo completed!")
     print("📁 Results saved in: output/demo/")
-    print("\n💡 Tip: Check booked interview slots with: python view_bookings.py")
+    print("\n💡 Tip: Check booked interview slots with: python src/view_bookings.py")
     print("="*70 + "\n")
 
 

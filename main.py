@@ -195,7 +195,7 @@ def main():
             slots = final_state.interview_coordination.interview_slots
             if slots:
                 print(f"\n📅 Interview Slot Booked: {slots[0].date} at {slots[0].time}")
-                print(f"   View all bookings: python view_bookings.py")
+                print(f"   View all bookings: python src/view_bookings.py")
         
         # Try to visualize workflow
         try:

@@ -138,12 +138,12 @@ python demo.py
 
 **Option 4: View Booked Interview Slots**
 ```bash
-python view_bookings.py
+python src/view_bookings.py
 ```
 
 **Option 5: Manage Bookings (view, cancel, clear)**
 ```bash
-python manage_bookings.py
+python src/manage_bookings.py
 ```
 
 ---
