@@ -441,23 +441,23 @@ python demo.py
 ## 📝 Design Decisions & Trade-offs
 
 ### 1. **LangGraph for Orchestration**
-- ✅ **Pros**: Clear state management, easy visualization, production-ready
-- ⚠️ **Cons**: Learning curve, overkill for simple workflows
+- **Pros**: Clear state management, easy visualization, production-ready
+- **Cons**: Learning curve, overkill for simple workflows
 - **Decision**: Chosen for scalability and maintainability
 
 ### 2. **Groq + Llama 3.3 70B**
-- ✅ **Pros**: Fast inference, cost-effective, strong reasoning
-- ⚠️ **Cons**: Rate limits, less flexible than OpenAI
+- **Pros**: Fast inference, cost-effective, strong reasoning
+- **Cons**: Rate limits, less flexible than OpenAI
 - **Decision**: Optimal balance of speed and quality
 
 ### 3. **Pydantic for Validation**
-- ✅ **Pros**: Type safety, automatic validation, great LLM integration
-- ⚠️ **Cons**: Slightly verbose
+- **Pros**: Type safety, automatic validation, great LLM integration
+- **Cons**: Slightly verbose
 - **Decision**: Essential for structured outputs
 
 ### 4. **Threshold-Based Routing**
-- ✅ **Pros**: Simple, transparent, configurable
-- ⚠️ **Cons**: No ML-based decision making
+- **Pros**: Simple, transparent, configurable
+- **Cons**: No ML-based decision making
 - **Decision**: Sufficient for initial version, easy to upgrade
 ---
 
