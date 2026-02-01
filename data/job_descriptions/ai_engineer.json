@@ -1,0 +1,36 @@
+{
+  "title": "AI Engineer",
+  "required_skills": [
+    "Python",
+    "LangGraph",
+    "LangChain",
+    "OpenAI API",
+    "RAG Systems",
+    "Vector Databases",
+    "LLM Applications",
+    "API Development"
+  ],
+  "preferred_skills": [
+    "Multi-agent Systems",
+    "Prompt Engineering",
+    "FastAPI",
+    "Docker",
+    "AWS",
+    "MongoDB",
+    "Redis"
+  ],
+  "min_years_experience": 1,
+  "education_requirements": [
+    "Bachelor's degree in Computer Science, Engineering, or related field",
+    "Master's degree preferred"
+  ],
+  "responsibilities": [
+    "Design and develop agentic AI systems using LangGraph",
+    "Build RAG pipelines for intelligent information retrieval",
+    "Implement multi-agent workflows for complex automation",
+    "Optimize LLM performance and cost efficiency",
+    "Collaborate with cross-functional teams on AI integration",
+    "Maintain and improve existing AI applications"
+  ],
+  "department": "AI Engineering"
+}

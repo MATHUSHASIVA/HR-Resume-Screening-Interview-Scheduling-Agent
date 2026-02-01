@@ -1,0 +1,52 @@
+KAVINDU SILVA
+Marketing Specialist Transitioning to Tech
+Email: kavindu.s@email.com | Phone: +94 71 234 5678
+Location: Colombo, Sri Lanka
+
+OBJECTIVE
+Marketing professional seeking to transition into AI engineering role. Completed several online 
+courses in Python and machine learning. Eager to apply analytical and communication skills to 
+technical projects.
+
+PROFESSIONAL EXPERIENCE
+
+Digital Marketing Manager | BrandWorks Agency                                       2019 - Present
+• Manage digital marketing campaigns for 15+ clients
+• Analyze campaign performance using Google Analytics
+• Create content strategies and social media plans
+• Use Excel for data analysis and reporting
+
+Marketing Coordinator | StartUp Media                                               2017 - 2019
+• Coordinated marketing events and product launches
+• Managed email marketing campaigns
+• Assisted with market research and competitor analysis
+
+EDUCATION
+
+Bachelor of Arts in Communications                          2013 – 2017
+University of Kelaniya, Sri Lanka
+GPA: 3.5/4.0
+
+TECHNICAL SKILLS (Self-Taught)
+• Basic Python programming
+• Completed course: "Python for Everybody" (Coursera)
+• Completed course: "AI For Everyone" (Coursera)
+• Familiar with: ChatGPT, Midjourney, basic SQL
+
+PROJECTS
+
+ChatGPT Marketing Assistant (Personal Project)                                      2023
+• Experimented with ChatGPT API to generate marketing copy
+• Created simple Python script to automate social media posts
+• Learning about prompt engineering
+
+ADDITIONAL SKILLS
+• Strong communication and presentation skills
+• Project management and team coordination
+• Data analysis and reporting (Excel, Google Sheets)
+• Content creation and copywriting
+
+INTERESTS
+• Passionate about AI and its applications in marketing
+• Following AI news and developments
+• Participating in online AI communities

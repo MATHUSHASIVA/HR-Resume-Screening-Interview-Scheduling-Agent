@@ -1,0 +1,67 @@
+NETHMIKA PERERA
+AI/ML Engineer | LangGraph Specialist
+Email: nethmika.p@email.com | Phone: +94 77 456 7890
+LinkedIn: linkedin.com/in/nethmika-perera
+Location: Colombo, Sri Lanka
+
+PROFESSIONAL SUMMARY
+Innovative AI Engineer with 4+ years of experience building production-grade AI systems. Expert in LangGraph, 
+LangChain, and multi-agent workflows. Proven track record of developing RAG pipelines and agentic AI applications 
+that solve complex business problems. Passionate about pushing the boundaries of LLM-based automation.
+
+TECHNICAL SKILLS
+• AI/ML: LangGraph, LangChain, OpenAI API, Anthropic Claude, RAG Systems, Vector Databases (Pinecone, Weaviate)
+• Languages: Python, JavaScript, TypeScript, SQL
+• Frameworks: FastAPI, Flask, React, Next.js
+• Tools: Docker, Git, AWS, MongoDB, Redis, PostgreSQL
+• Specialties: Multi-agent Systems, Prompt Engineering, Agentic Workflows, LLM Optimization
+
+PROFESSIONAL EXPERIENCE
+
+Senior AI Engineer | TechFlow AI                                                    Jan 2022 - Present
+• Architected and deployed a multi-agent RAG system using LangGraph serving 50K+ daily queries
+• Reduced LLM API costs by 40% through intelligent caching and prompt optimization strategies
+• Built agentic workflow automation that eliminated 15 hours/week of manual data processing
+• Implemented vector search pipeline with 95% retrieval accuracy for knowledge base queries
+• Led team of 3 engineers in developing production AI applications with 99.9% uptime
+
+AI/ML Engineer | DataMinds Inc.                                                     Jun 2020 - Dec 2021
+• Developed custom RAG pipeline for legal document analysis, processing 10K+ documents
+• Created conversational AI agents using LangChain for customer support automation
+• Integrated OpenAI GPT models with enterprise systems via RESTful APIs
+• Improved model response time by 60% through optimization and caching strategies
+
+Junior Software Engineer | StartupHub                                               Jan 2019 - May 2020
+• Built Python backend services using Flask and PostgreSQL
+• Developed REST APIs for mobile and web applications
+• Implemented automated testing and CI/CD pipelines
+
+EDUCATION
+
+Master of Science in Artificial Intelligence.                                     2018 – 2019
+University of Colombo School of Computing (UCSC), Sri Lanka
+GPA: 3.8 / 4.0
+
+Bachelor of Engineering in Computer Science.                                      2014 – 2018
+University of Moratuwa, Sri Lanka
+GPA: 3.7 / 4.0
+
+PROJECTS
+
+Personal AI Assistant (LangGraph + RAG)                                            2023
+• Built multi-agent personal assistant using LangGraph with task planning, web search, and memory
+• Implemented persistent conversation context using vector database and state management
+• Integrated calendar, email, and note-taking capabilities through API orchestration
+
+Open Source Contributions
+• Active contributor to LangChain community (50+ GitHub stars on personal projects)
+• Published blog posts on advanced RAG techniques and prompt engineering best practices
+
+CERTIFICATIONS
+• AWS Certified Solutions Architect - Associate
+• OpenAI API Specialist Certification
+
+ACHIEVEMENTS
+• Winner, AI Hackathon 2023 - Built real-time code review agent
+• Speaker, PyData Conference 2022 - "Building Production RAG Systems"
+• Published research paper on multi-agent coordination at AAAI 2021

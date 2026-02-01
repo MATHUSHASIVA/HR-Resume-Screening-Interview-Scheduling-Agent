@@ -1,0 +1,53 @@
+AMALI FERNANDO
+Software Developer
+Email: amali.fernando@email.com | Phone: +94 77 987 6543
+Location: Colombo, Sri Lanka
+
+SUMMARY
+Software developer with 2 years of experience in Python and web development. Interested in learning 
+about AI and machine learning technologies. Quick learner with strong problem-solving skills.
+
+TECHNICAL SKILLS
+• Languages: Python, JavaScript, HTML/CSS
+• Frameworks: Django, Flask, jQuery
+• Databases: MySQL, SQLite
+• Tools: Git, VS Code, Postman
+
+WORK EXPERIENCE
+
+Software Developer | WebSolutions Co.                                               Mar 2022 - Present
+• Develop web applications using Django and Python
+• Create REST APIs for frontend integration
+• Work with MySQL databases for data storage
+• Participate in code reviews and team meetings
+
+Junior Developer | LocalTech Startup                                                Jun 2021 - Feb 2022
+• Built simple web pages using HTML, CSS, and JavaScript
+• Fixed bugs in existing codebase
+• Learned about software development lifecycle
+
+EDUCATION
+
+Bachelor of Science in Information Technology                                        2017 – 2021
+Sri Lanka Institute of Information Technology (SLIIT), Colombo, Sri Lanka
+GPA: 3.4/4.0
+
+COURSES & LEARNING
+• Completed online course: "Introduction to Machine Learning" (Coursera)
+• Currently learning: LangChain basics (YouTube tutorials)
+• Interested in: AI, NLP, and automation
+
+PROJECTS
+
+Personal Blog Website                                                               2022
+• Created blog using Django and PostgreSQL
+• Implemented user authentication and comments system
+
+Todo List App                                                                       2021
+• Built simple task manager using Flask and SQLite
+• Deployed on Heroku
+
+INTERESTS
+• Exploring AI and ChatGPT applications
+• Reading about new technologies
+• Contributing to open source (beginner level)

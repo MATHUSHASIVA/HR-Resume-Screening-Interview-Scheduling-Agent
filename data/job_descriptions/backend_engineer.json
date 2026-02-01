@@ -1,0 +1,32 @@
+{
+  "title": "Senior Backend Engineer",
+  "required_skills": [
+    "Python",
+    "FastAPI",
+    "PostgreSQL",
+    "REST API",
+    "Microservices",
+    "Docker",
+    "Git"
+  ],
+  "preferred_skills": [
+    "Kubernetes",
+    "AWS",
+    "Redis",
+    "GraphQL",
+    "CI/CD",
+    "System Design"
+  ],
+  "min_years_experience": 5,
+  "education_requirements": [
+    "Bachelor's degree in Computer Science or related field"
+  ],
+  "responsibilities": [
+    "Design and implement scalable backend services",
+    "Build RESTful APIs and microservices",
+    "Optimize database performance",
+    "Lead technical architecture decisions",
+    "Mentor junior engineers"
+  ],
+  "department": "Engineering"
+}
