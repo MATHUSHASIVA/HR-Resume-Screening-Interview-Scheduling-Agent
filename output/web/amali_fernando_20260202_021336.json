@@ -1,0 +1,42 @@
+{
+  "candidate_info": {
+    "name": "Amali Fernando",
+    "email": "amali.fernando@email.com",
+    "phone": "+94 77 987 6543",
+    "location": "Colombo, Sri Lanka",
+    "linkedin": null
+  },
+  "screening_score": {
+    "score": 60,
+    "classification": "Moderate Fit",
+    "reasoning": "Amali Fernando has a moderate fit for the AI Engineer position. While she has 3 years of experience in software development and proficiency in Python, which is a required skill, she lacks experience in most of the required skills such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, and LLM Applications. However, she has experience with FastAPI, which is a preferred skill, and has a strong background in web and backend application development. Her education background is also relevant, although a Master's degree is preferred.",
+    "strengths": [
+      "Proficient in Python",
+      "Experienced in software development",
+      "Skilled in FastAPI",
+      "Strong background in web and backend application development",
+      "Familiarity with cloud platforms like AWS"
+    ],
+    "gaps": [
+      "Lack of experience in LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, and LLM Applications",
+      "No experience in API Development",
+      "Limited experience with Docker and MongoDB",
+      "No mention of experience with Multi-agent Systems or Prompt Engineering",
+      "Education level is a Bachelor's degree, whereas a Master's degree is preferred"
+    ],
+    "skill_match_percentage": 40.0
+  },
+  "decision": "reject",
+  "interview_coordination": {
+    "interview_questions": [],
+    "email_template": {
+      "subject": "Update on Your Application for AI Engineer Position at Zelora Tech",
+      "body": "Dear Amali Fernando,\n\nThank you for your interest in the AI Engineer position at Zelora Tech. We appreciate the time you took to apply for this role and share your qualifications with us.\n\nAlthough your background and skills are impressive, we regret to inform you that we will not be moving forward with your application at this time. Our team was looking for candidates with more experience in specific technologies such as LangGraph, LangChain, OpenAI API, RAG Systems, Vector Databases, and LLM Applications, as well as API development experience, which were not highlighted in your application.\n\nPlease know that this decision is not a reflection on your potential as a candidate, and we encourage you to continue developing your skills and consider applying for future opportunities at Zelora Tech.\n\nBest regards,\nThe Zelora Tech Talent Team\nhr@zeloratech.com",
+      "tone": "Professional"
+    },
+    "interview_slots": [],
+    "recommended_interviewers": []
+  },
+  "timestamp": "2026-02-02T02:13:33.054042",
+  "error": null
+}

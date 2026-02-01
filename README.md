@@ -443,5 +443,3 @@ python demo.py
 - [ ] **Advanced Parsing**: Computer vision for complex resume formats
 
 ---
-
-
