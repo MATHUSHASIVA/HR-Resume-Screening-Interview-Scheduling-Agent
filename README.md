@@ -2,6 +2,8 @@
 
 An intelligent, automated HR screening system built with **LangGraph** that streamlines resume analysis, candidate evaluation, and interview coordination using agentic AI workflows.
 
+![HR Resume Screening AI System](Images/HR%20Resume%20Screening%20AI%20System.jpeg)
+
 ---
 
 ## 🎯 Overview
@@ -164,6 +166,8 @@ The system now includes intelligent booking management with business rules:
 - **Conflict Prevention**: Interview slots checked against existing bookings
 - **Auto-Booking**: First available slot is automatically booked for qualified candidates
 
+![Interview Slots](Images/Interview%20Slots.jpeg)
+
 ---
 
 ## 📊 State Management with LangGraph
@@ -246,6 +250,10 @@ python main.py
 
 ### Output
 
+![Strong Fit Example 1](Images/Strong%20Fit.jpeg)
+
+![Strong Fit Example 2](Images/Strong%20Fit%202.jpeg)
+
 ```
 ====================================================================
 HR SCREENING RESULTS
@@ -280,6 +288,8 @@ HR SCREENING RESULTS
 ✅ DECISION: ACCEPT
 
 📅 INTERVIEW COORDINATION
+
+   ![Interview Coordination](Images/Interviiew%20Coordination.jpeg)
 
    Interview Questions (8 total):
       1. [Technical] Can you walk us through your approach to building
@@ -319,6 +329,9 @@ HR SCREENING RESULTS
       • Senior Team Member
 
 📧 EMAIL PREVIEW
+
+   ![Invitation to Interview Email](Images/Invitation%20to%20Interview%20email.jpeg)
+
    Subject: Interview Invitation - AI Engineer Position at Zelora Tech
    ---
    Dear Nethmika,
@@ -351,6 +364,23 @@ HR SCREENING RESULTS
 
 ✅ Results saved to: output/nethmika_perera_20260130_143022.json
 ```
+
+---
+
+## Example 2: Moderate Fit Candidate (Amali Fernando)
+
+![Moderate Fit Sample](Images/Moderate%20Fit%20Sample.jpeg)
+
+Candidates with scores between 50-70 are classified as Moderate Fit and may receive rejection emails with constructive feedback.
+
+---
+
+## Example 3: Rejection Email
+
+![Rejection Email](Images/Rejection%20Email%20.jpeg)
+
+Candidates who don't meet the threshold receive personalized rejection emails with constructive feedback to help them improve.
+
 ---
 
 ## ⚙️ Configuration
