@@ -147,31 +147,34 @@ Guidelines:
 - Warm and welcoming tone
 - Express genuine interest in the candidate
 - Clearly state the position
-- Include interview details
+- Present available interview slots WITHOUT saying "we have scheduled" - instead say these slots are AVAILABLE or PROPOSED
+- DO NOT state "we have scheduled three time slots" - say "We have the following time slots available"
 - Be concise and professional
 - Use proper paragraph breaks (double newlines \\n\\n between paragraphs)
 - End with {COMPANY_NAME} signature on a new line
+
+IMPORTANT: Present the time slots as OPTIONS for the candidate to choose from, not as already scheduled times.
 
 Format:
 Dear [Name],
 
 [Introduction and interest paragraph]
 
-[Interview details paragraph with time slots]
+[Available interview slots paragraph - present as options to choose from, NOT as already scheduled]
 
-[Closing paragraph]
+[Closing paragraph asking them to confirm their preferred slot]
 
 {HR_SIGNATURE}"""),
             ("user", """Candidate: {candidate_name}
 Position: {job_title}
 Candidate Strengths: {strengths}
 
-Interview Time Slots:
+Available Interview Time Slots (for candidate to choose):
 {time_slots}
 
 Duration: {duration}
 
-Create an engaging invitation email with proper formatting.""")
+Create an engaging invitation email presenting these as AVAILABLE time slot OPTIONS for the candidate to select their preference.""")
         ])
         
         chain = prompt | llm_with_structure
